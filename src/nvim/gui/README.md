@@ -75,8 +75,10 @@ own.
   - `missing` and `templates`: names that are nowhere, and what new
     declarations start from.
   - `init`: the facade.
-- **Parsers**: the Go and Rust grammars (`grammars/`, MIT) are built into
-  `lib/nvim/parser` beside the bundled ones; their highlight queries are in
+- **Parsers**: the Go and Rust grammars (tree-sitter-go, tree-sitter-rust,
+  MIT) are bundled parsers like Nvim's others: pinned in
+  `cmake.deps/deps.txt`, downloaded and built by the deps build into
+  `lib/nvim/parser`. Their highlight queries and licences are in
   `runtime/biscide/grammars/`.
 
 ## Using it

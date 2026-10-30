@@ -31,6 +31,10 @@ endfunction()
 foreach(lang c diff lua vim vimdoc query)
   BuildTSParser(LANG ${lang})
 endforeach()
+# Go and Rust: the code biscide (`nvim --gui`) reads.
+foreach(lang go rust)
+  BuildTSParser(LANG ${lang})
+endforeach()
 BuildTSParser(LANG markdown CMAKE_FILE MarkdownParserCMakeLists.txt)
 
 if(USE_BUNDLED_TS_PARSERS AND ENABLE_WASMTIME)
